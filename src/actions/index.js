@@ -9,9 +9,9 @@ export function fetchRecentPosts() {
       .then((response) => {
         console.log("response", response.data.posts);
         dispatch({
-            type: SET_RECENT_POSTS,
-            payload: response.data.posts
-        })
+          type: SET_RECENT_POSTS,
+          payload: response.data.posts,
+        });
       })
       .catch((error) => {
         console.log("recent post fetch error", error);
