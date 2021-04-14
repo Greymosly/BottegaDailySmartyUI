@@ -4,11 +4,13 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import App from "./components/app";
+import Results from "./components/results";
 import reducers from "./reducers";
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 import "./style/main.scss";
+
 
 function main() {
   ReactDOM.render(
@@ -16,7 +18,7 @@ function main() {
       <BrowserRouter>
         <Switch>
           <Route path="/" component={App}/>
-          <Route path="/results" component={App}/>
+          <Route path="/results" component={Results}/>
         </Switch>
       </BrowserRouter>
     </Provider>,
