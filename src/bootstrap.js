@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import App from "./components/app";
+import Home from "./components/home";
 import Results from "./components/results";
 import reducers from "./reducers";
 
@@ -17,7 +17,7 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={App}/>
+          <Route path="/" exact component={Home}/>
           <Route path="/results" component={Results}/>
         </Switch>
       </BrowserRouter>
