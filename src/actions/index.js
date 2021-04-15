@@ -7,7 +7,7 @@ export function fetchRecentPosts() {
     axios
       .get("https://api.dailysmarty.com/posts")
       .then((response) => {
-        console.log("response", response.data.posts);
+        console.log("fetchRecentPosts response", response.data.posts);
         dispatch({
           type: SET_RECENT_POSTS,
           payload: response.data.posts,
@@ -17,4 +17,17 @@ export function fetchRecentPosts() {
         console.log("recent post fetch error", error);
       });
   };
+}
+
+export function fetchPostsWithQuery(query) {
+  return function(dispatch) {
+      axios.get(`https://api.dailysmarty.com/search?q=${query}`)
+          .then(response => {
+              console.log('fetchPostsWithQuery response',response.data);
+              // dispatch({
+              //     type: SET_RECENT_POSTS,
+              //     payload: response.data.posts
+              // })
+          })
+  }
 }
