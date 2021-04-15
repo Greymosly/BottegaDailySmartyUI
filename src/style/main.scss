@@ -1,4 +1,6 @@
-@import "./logo-main.scss";
+@import "./variables";
+@import "./searchBar.scss";
+
 
 .post-topic {
     margin: 0 4px;
@@ -21,3 +23,4 @@ body {
     justify-items: center;
     // grid-template-rows: 1fr 2fr 1fr;
 }
+
