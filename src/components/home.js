@@ -12,15 +12,13 @@ class Home extends Component {
     this.props.fetchPostsWithQuery(query, () => {
       this.props.history.push("/results");
     });
-  };
+  }
   render() {
     return (
-      <div>
-        <div>
-          <Logo />
-          <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)} />
-          <RecentPosts />
-        </div>
+      <div className="home">
+        <Logo />
+        <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)} />
+        <RecentPosts />
       </div>
     );
   }
