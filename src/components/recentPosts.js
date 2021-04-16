@@ -25,7 +25,6 @@ class RecentPosts extends Component {
                         {this.renderPosts()}
                     </ul>
                 </div>
-
             </div>
         )
     }

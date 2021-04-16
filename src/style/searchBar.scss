@@ -1,7 +1,8 @@
 .search-bar {
 
     .search-bar-wrapper {
-        display: gird;
+
+        display: grid;
         grid-row-gap: 23px;
         width: 100%;
 
@@ -11,16 +12,16 @@
             box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
             border: 0px solid transparent;
             border-radius: 5px;
-    
+
             height: 118px;
             font-size: 40px;
-    
+
             transition: all .2s ease;
-    
+
             &::placeholder {
                 color: $color-gray-two;
             }
-    
+
             &:focus {
                 outline: none;
                 box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
@@ -33,6 +34,7 @@
             color: $color-gray-two;
         }
     }
+
 }
 
 
